@@ -85,7 +85,28 @@
           </div>
 
        
-
+          <div class="row">
+            <div class="col w-100">
+                <% for (let todo of todos){ %>
+                  <div id="todo-details-<%=todo._id%>-wrapper" class="row justify-between  todo-item-wrapper" data-todo-id="<%=todo._id%>">
+                    <div class="row">
+                      <div class="todo-checkbox-wrapper">
+                        <input class="todo-item-checkbox" id="<%=todo._id%>" type="checkbox">
+                      </div>
+                      <div id="todo-details-<%=todo._id%>" class="col todo-details-wrapper">
+                        <div class="todo-title"><%= todo.title %></div>
+                        <div class="todo-desc"><%= todo.description %></div>
+                        <div class="todo-due-date"><%= todo.dueDate %></div>
+                      </div>
+                    </div>
+                    <div class="col todo-category-wrapper ">
+                        <div><%= todo.category %></div>
+                    </div>
+                  </div>
+                <%}%>
+  
+            </div>
+          </div>
 
 
 

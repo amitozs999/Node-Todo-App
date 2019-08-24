@@ -1,8 +1,8 @@
 var express = require('express');
 
-var port = 8040;
+var port = 8155;
 
-
+var Todo=require('./models/todo');
 
 var db=require('./config/mongoose')
 
@@ -18,11 +18,30 @@ app.use(bodyparser.urlencoded({
 
 app.use(express.static('assets'));
 
-
+var TodoList = [
+    {
+        title: "Amitoz singh",
+        desciption: "1474847",
+        cateogary:"work",
+        deadline:"djd"
+    }
+    
+]
 
 app.get('/', function(req, res){
+
+    Todo.find({}).exec(function(err,data){
+        if(err){
+             return;
+         }
+         let todoss = [...data];
+        
+          return res.render('home',{
+              title: "Contact List",
+              todos:todoss});
+          });
   
-     return res.render('home');
+    
 
 });
 
