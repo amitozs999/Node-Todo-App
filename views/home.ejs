@@ -48,9 +48,10 @@
                   <label>Category</label>
                   <select id="category-input" name="category" required>
                     <option value="" selected disabled>Select An Option</option>
-                    <option value="personal">Personal</option>
                     <option value="work">Work</option>
+                    <option value="personal">Personal</option>
                     <option value="school">School</option>
+                    <option value="holiday">Holiday</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -75,14 +76,14 @@
 					<button id="delete-tasks">Delete Tasks</button>
         </div>
 
-
+<!-- 
         <div id="filter-actions" class="row justify-center">
             
             <a class="filter" href="/?sort=latest-first">Latest First</a>
             <a class="filter" href="/?sort=ascending&prop=title">Title A-Z</a>
           
             <a class="filter" href="/?sort=group-by-categories">Group by Category</a>
-          </div>
+          </div> -->
 
        
           <div class="row">
@@ -96,7 +97,7 @@
                       <div id="todo-details-<%=todo._id%>" class="col todo-details-wrapper">
                         <div class="todo-title"><%= todo.title %></div>
                         <div class="todo-desc"><%= todo.description %></div>
-                        <div class="todo-due-date"><%= todo.dueDate %></div>
+                        <div class="todo-deadline"><%= todo.deadline %></div>
                       </div>
                     </div>
                     <div class="col todo-category-wrapper ">
@@ -116,7 +117,9 @@
   </div>
 
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/js/home.js"></script>
 
   </body>
 
