@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo App</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="/css/home.css" />
+  </head>
+
+
+
+
+  <body>
+ <div class="container">
+
+  <div class="card" id="app-wrapper">
+
+        <div class="row">
+          <h1 class="app-title">TODO App</h1>
+
+        </div>
+
+        <div class="row">
+          <form id="create-todo-form" class="col w-100 self-center">
+
+
+             <div class="row">
+                    <div class="col w-100">
+                       <label>Title</label>
+                       <input id="title-input"autocomplete="off" class="w-100" placeholder="Write Your Title here" required type="text" name="title" />
+                    </div>
+             </div>
+
+
+             <div class="row">
+                <div class="col w-100">
+                  <label>Description</label>
+                  <textarea id="desc-input" autocomplete="off" class="w-100" placeholder="Write Your Description here" rows="3" name="description" ></textarea>
+                </div>
+            </div>
+        
+          <div class="row ">
+              <div class="w-50">
+                <div class="col w-70">
+                  <label>Category</label>
+                  <select id="category-input" name="category" required>
+                    <option value="" selected disabled>Select An Option</option>
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="school">School</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="w-50">
+					<div class="col w-70">
+						<label>Due Date</label>
+						<input id="due-date-input" autocomplete="off" type="text" name="dueDate">
+					</div>
+			</div>
+
+
+         
+         </div>   
+
+       </form>
+     </div>
+
+     <div id="todo-actions" class="row justify-center">
+					<button id="add-task">Add Task</button>
+					<button id="delete-tasks">Delete Tasks</button>
+        </div>
+
+
+        <div id="filter-actions" class="row justify-center">
+            
+            <a class="filter" href="/?sort=latest-first">Latest First</a>
+            <a class="filter" href="/?sort=ascending&prop=title">Title A-Z</a>
+          
+            <a class="filter" href="/?sort=group-by-categories">Group by Category</a>
+          </div>
+
+       
+
+
+
+
+
+
+   </div>
+  </div>
+
+
+
+
+  </body>
+
+
+
+
+</html>
